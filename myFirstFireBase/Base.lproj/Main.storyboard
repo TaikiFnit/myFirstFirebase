@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PMU-lp-LfD">
-                                <rect key="frame" x="16" y="65" width="343" height="452"/>
+                                <rect key="frame" x="16" y="96" width="343" height="421"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -67,21 +67,30 @@
                                     <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1JI-sc-Fwe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-er-AFe">
+                                <rect key="frame" x="16" y="55" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1V3-gg-vkO" firstAttribute="top" secondItem="Ihl-Ob-Rr6" secondAttribute="bottom" constant="15" id="05x-z2-IA4"/>
                             <constraint firstItem="AuM-t1-HyC" firstAttribute="top" secondItem="PMU-lp-LfD" secondAttribute="bottom" constant="10" id="6Pj-Jt-pl3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DOc-er-AFe" secondAttribute="trailing" id="7Ce-W2-6HM"/>
+                            <constraint firstItem="DOc-er-AFe" firstAttribute="top" secondItem="aK0-BT-IPf" secondAttribute="bottom" constant="5" id="9Re-EB-2S9"/>
+                            <constraint firstItem="DOc-er-AFe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IRe-xP-hpJ"/>
                             <constraint firstItem="AuM-t1-HyC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KFw-eg-o36"/>
                             <constraint firstItem="PMU-lp-LfD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MRa-G5-cQD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AuM-t1-HyC" secondAttribute="trailing" id="Quk-QB-ezy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1V3-gg-vkO" secondAttribute="bottom" constant="20" id="Ubr-ml-ZO5"/>
                             <constraint firstItem="Ihl-Ob-Rr6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YaP-sU-eQ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ihl-Ob-Rr6" secondAttribute="trailing" id="adZ-XA-1gK"/>
+                            <constraint firstItem="PMU-lp-LfD" firstAttribute="top" secondItem="DOc-er-AFe" secondAttribute="bottom" constant="20" id="cTp-cM-A0m"/>
                             <constraint firstItem="Ihl-Ob-Rr6" firstAttribute="top" secondItem="AuM-t1-HyC" secondAttribute="bottom" constant="15" id="dik-rt-KMU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aK0-BT-IPf" secondAttribute="trailing" id="iV1-8i-nCZ"/>
                             <constraint firstItem="aK0-BT-IPf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oI1-E7-j4d"/>
-                            <constraint firstItem="PMU-lp-LfD" firstAttribute="top" secondItem="aK0-BT-IPf" secondAttribute="bottom" constant="15" id="qCA-kG-2cQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1V3-gg-vkO" secondAttribute="trailing" id="qb4-Hz-SKk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PMU-lp-LfD" secondAttribute="trailing" id="sAw-kF-ayj"/>
                             <constraint firstItem="aK0-BT-IPf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sUb-vN-CZz"/>
@@ -89,13 +98,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="DOc-er-AFe" id="ybM-Oc-2QG"/>
                         <outlet property="textField" destination="AuM-t1-HyC" id="aaH-kQ-sbb"/>
                         <outlet property="textView" destination="PMU-lp-LfD" id="IgK-mj-ieT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="61"/>
+            <point key="canvasLocation" x="928.79999999999995" y="60.719640179910051"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8UB-LD-b7F">

@@ -37,6 +37,18 @@ class signUpViewController: UIViewController {
         
         FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
             
+//            print("user")
+//            print(user)
+//            print("errror")
+//            print(error)
+//            print("user?.displayName")
+//            print(user?.displayName)
+//            print(user?.email)
+//            print(user?.uid)
+//            print(user.debugDescription)
+//            print(user?.isEmailVerified)
+//            print(user?.isAnonymous) // is匿名
+            
             let next = self.storyboard!.instantiateViewController(withIdentifier: "realtimeDatabase")
             self.present(next, animated: true, completion: nil)
         }

@@ -18,7 +18,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextFIeld: UITextField!
 
     @IBAction func pushLoginButton(_ sender: UIButton) {
-
+        
+        
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextFIeld.text!) { (user, error) in
+            print(user)
+            print(error)
+            
+            if (user != nil) {
+                let next = self.storyboard!.instantiateViewController(withIdentifier: "realtimeDatabase")
+                self.present(next, animated: true, completion: nil)
+            }
+            else {
+                print("error!")
+                print(error)
+            }
+        }
     }
     
     @IBAction func pushCreateButton(_ sender: UIButton) {
@@ -29,6 +43,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         self.ref = FIRDatabase.database().reference()
+        
+        if let user = FIRAuth.auth()?.currentUser {
+            // user is signed in.
+            let next = self.storyboard!.instantiateViewController(withIdentifier: "realtimeDatabase")
+            self.present(next, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

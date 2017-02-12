@@ -12,6 +12,7 @@
 		AC10CACA1E4AB7B900058A83 /* Firebase_16-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC10CAC91E4AB7B900058A83 /* Firebase_16-logo.png */; };
 		AC10CACC1E4ABB6D00058A83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CACB1E4ABB6D00058A83 /* LoginViewController.swift */; };
 		AC10CACE1E4AD1EF00058A83 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CACD1E4AD1EF00058A83 /* signUpViewController.swift */; };
+		AC10CAD01E4DDF4500058A83 /* database_structure.json in Resources */ = {isa = PBXBuildFile; fileRef = AC10CACF1E4DDF4500058A83 /* database_structure.json */; };
 		AC1DC9CB1E370EC100A368FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DC9CA1E370EC100A368FA /* AppDelegate.swift */; };
 		AC1DC9CD1E370EC100A368FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DC9CC1E370EC100A368FA /* ViewController.swift */; };
 		AC1DC9D01E370EC100A368FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1DC9CE1E370EC100A368FA /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		AC10CAC91E4AB7B900058A83 /* Firebase_16-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Firebase_16-logo.png"; sourceTree = "<group>"; };
 		AC10CACB1E4ABB6D00058A83 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC10CACD1E4AD1EF00058A83 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		AC10CACF1E4DDF4500058A83 /* database_structure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = database_structure.json; sourceTree = "<group>"; };
 		AC1DC9C71E370EC100A368FA /* myFirstFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1DC9CA1E370EC100A368FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1DC9CC1E370EC100A368FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				AC10CAC91E4AB7B900058A83 /* Firebase_16-logo.png */,
 				AC1DC9D61E370EC100A368FA /* Info.plist */,
 				AC1DC9F81E370EF700A368FA /* GoogleService-Info.plist */,
+				AC10CACF1E4DDF4500058A83 /* database_structure.json */,
 			);
 			path = myFirstFireBase;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				AC10CACA1E4AB7B900058A83 /* Firebase_16-logo.png in Resources */,
 				AC1DC9D51E370EC100A368FA /* LaunchScreen.storyboard in Resources */,
+				AC10CAD01E4DDF4500058A83 /* database_structure.json in Resources */,
 				AC1DC9F91E370EF700A368FA /* GoogleService-Info.plist in Resources */,
 				AC1DC9D21E370EC100A368FA /* Assets.xcassets in Resources */,
 				AC1DC9D01E370EC100A368FA /* Main.storyboard in Resources */,

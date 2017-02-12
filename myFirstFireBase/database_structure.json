@@ -1,0 +1,71 @@
+// Database Structure for firebase realtime database
+// ver. 2017/02/10
+// TaikiFnit
+
+{
+    // users database (もしかしたら、authentication が保持しているので必要ない可能性)
+    "users": {
+        "u_id1": {
+            "nickname": "TaikiFnit",
+            "since": 1459361875337, // 家庭菜園歴
+            "image": "image_url",
+            "post_histories": { // 過去に投稿した質問. 現段階ではWBSには書いていないが、いずれ必要にはなる
+                "post_id1": true,
+                "post_id2": true
+            },
+            "reply_histories": { // post_hitoriesと同じく.
+                "reply_id1": true,
+                "reply_id2": true
+            }
+        },
+        "u_id2" : {
+            
+        }
+    },
+    
+    // 投稿
+    "posts": {
+        "post_id1": {
+            "body" : "トマトの形が...", // 投稿文
+            "uid": "u_id1", // 投稿者のid (名前の参照や, その人の投稿履歴管理に使用)
+            "image": "image_url",
+            "category_id": 1, // category_id, belongs_to
+            "timestamp": 1459361875337,
+            "replies": { // has_many
+                "reply_id1": true,
+                "reply_id2": true
+            }
+            
+        },
+        "post_id2": {
+            // ...
+        }
+    },
+    
+    "replies": {
+        "reply_id1": {
+            "post_id": "post_id1", // belongs_to
+            "u_id": "u_id1",
+            "body": "返信本体",
+            "timestamp": 1459361875337,
+        },
+        "reply_id2": {
+            // ...
+        }
+    }
+    
+    "categories": {
+        1: {
+            "name": "野菜",
+            "post_ids": { // has_many
+                "post_id1"
+            }
+        },
+        2: {
+            "name": "果樹",
+            "post_ids": { // has_many
+            }
+        }
+    }
+    
+}
