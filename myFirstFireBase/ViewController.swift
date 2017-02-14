@@ -27,15 +27,6 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
         user = FIRAuth.auth()?.currentUser
         nameLabel.text = "Signed in as " + (user?.email)!
         
-
-        self.ref.child("posts").child(user!.uid).observeSingleEvent(of: .value, with: { (snapShot) in
-            
-            for rest in snapShot.children.allObjects as! [FIRDataSnapshot] {
-                //self.showComment(rest: rest)
-            }
-            
-        })
-        
         observeTextEvent()
     }
     
@@ -78,13 +69,16 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     
     func observeTextEvent() {
         self.ref.child("posts").child(user!.uid).observe(.childAdded, with: { (snapShot) in
+            
             self.showComment(rest: snapShot)
+            
             // observeのevent type が .childAdded ではなく .valueの際は、snapShotの連想配列なので、for を使用して個別にsnapShotを取り出す必要がある.
 //            for rest in snapShot.children.allObjects as! [FIRDataSnapshot] {
                 //self.showComment(rest: rest)
 //                print(rest)
 //            }
         })
+        
         
         self.ref.child("posts").child(user!.uid).observe(.childRemoved, with: { (snapShot) in
             self.textView.text = ""
