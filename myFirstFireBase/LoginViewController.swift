@@ -19,7 +19,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func pushLoginButton(_ sender: UIButton) {
         
-        
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextFIeld.text!) { (user, error) in
             print(user)
             print(error)
